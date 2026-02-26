@@ -1,0 +1,22 @@
+### vscode ###
+.vscode/
+!.vscode/settings.json
+*.DS_Store
+
+### Python ###
+__pycache__/
+
+### generated files ###
+ckpt/
+data/
+logs/
+# pretrain/
+runs/
+todo/
+*.out
+*.pth
+*.sh
+*.ipynb
+*.txt
+
+datasets/
