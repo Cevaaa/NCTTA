@@ -1,0 +1,17 @@
+torch==2.2.2
+torchvision==0.17.2
+torchaudio==2.2.2
+timm==0.9.16
+numpy==1.26.4
+pandas>=1.1.5
+pillow>=9.0.1
+pytz>=2021.3
+scikit-learn>=1.0.3
+scipy>=1.7.3
+tqdm>=4.56.2
+tyro>=0.5.5
+gdown>=5.2.0
+scikit-image>=0.22.0
+opencv-python>=4.10.0
+einops==0.7.0
+Wand>=0.6.13
