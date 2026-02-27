@@ -15,18 +15,8 @@
 
 <img src="https://visitor-badge.laobi.icu/badge?page_id=Cevaaa.NCTTA" />
 
-</p>
-This repository is the official implementation of
-<br>
-**[Neural Collapse in Test Time Adaptation](https://arxiv.org/abs/2512.10421)**, CVPR, 2026
-<br>
-<a href="https://scholar.google.com/citations?user=kFWimw4AAAAJ">Xiao Chen</a>,
-<a href="">Zhongjing Du</a>,
-<a href="">Jiazhen Huang</a>,
-<a href="">Xu Jiang</a>,
-<a href="">Li Lu</a>,
-<a href="">Jingyan Jiang</a>,
-<a href="">Zhi Wang</a>
+This is the official implementation of [Neural Collapse in Test Time Adaptation](https://arxiv.org/abs/2512.10421) on CVPR 2026. We propose NCTTA as a novel algrithm for test-time adaption.
+
 
 ## Overview
 
