@@ -99,7 +99,8 @@ In addition to the algorithms already implemented in [TTAB](https://github.com/L
 - **COME: Test-time Adaptation by Conservatively Minimizing Entropy** (COME, [Zhan et al., 2025](https://openreview.net/pdf?id=506BjJ1ziZ))  
 - **Adapt in the Wild: Test-Time Entropy Minimization with Sharpness and Feature Regularization** (SAR2, [Niu et al., 2025](https://arxiv.org/abs/2509.04977))  
 - **Decoupled Entropy Minimization** (AdaDEM, [Ma et al., 2025](https://arxiv.org/abs/2511.03256))  
-- **Uncertainty-Calibrated Test-Time Model Adaptation without Forgetting** (EATAC, [Tan et al., 2025](https://arxiv.org/abs/2403.11491))  
+- **Uncertainty-Calibrated Test-Time Model Adaptation without Forgetting** (EATAC, [Tan et al., 2025](https://arxiv.org/abs/2403.11491))
+- **ViDA: Homeostatic Visual Domain Adapter for Continual Test Time Adaptation** (ViDA, [Liu et al., 2023](https://arxiv.org/abs/2306.04344))
 
 ## 🀄️ Bibliography
 If you find this repository helpful for your project, please consider citing:
