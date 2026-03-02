@@ -48,6 +48,7 @@ def get_args():
             "conjugate_pl",
             "cotta",
             "eata",
+            "vida",
         ],
         type=str,
     )

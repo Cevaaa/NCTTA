@@ -13,6 +13,7 @@ from .tent import TENT
 from .ttt import TTT
 from .ttt_plus_plus import TTTPlusPlus
 from .rotta import Rotta
+from .vida import ViDA
 
 
 def get_model_adaptation_method(adaptation_name):
@@ -31,4 +32,5 @@ def get_model_adaptation_method(adaptation_name):
         "cotta": CoTTA,
         "eata": EATA,
         "rotta": Rotta,
+        "vida": ViDA,
     }[adaptation_name]

@@ -100,5 +100,21 @@ algorithm_defaults = {
         "lambda_t": 1.0,
         "lambda_u": 1.0,
         "alpha": 0.05,
-    }
+    },
+    "vida":{
+        "optimizer": "SGD",
+        'ViDALR': 1e-4,
+        'WD': 0.,
+        'MT': 0.999,
+        'MT_ViDA': 0.999,
+        'beta': 0.9,
+        "vida_rank1": 1,
+        "vida_rank2": 128,
+        "unc_thr":0.2,
+        "alpha_teacher": 0.999,
+        "alpha_vida": 0.99,
+        "bn_momentum": 0.01,
+        "aug_size": 10,
+        "rst_prob": 0.001,
+        },
 }
