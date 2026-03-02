@@ -18,9 +18,14 @@
 This is the official implementation of [Neural Collapse in Test Time Adaptation](https://arxiv.org/abs/2512.10421) on CVPR 2026. We propose NCTTA as a novel algrithm for test-time adaption.
 
 
-## Overview
+## 🐏 Overview
 
-  Test-Time Adaptation (TTA) enhances model robustness to out-of-distribution (OOD) data by updating the model online during inference, yet existing methods lack theoretical insights into the fundamental causes of performance degradation under domain shifts. Recently, Neural Collapse (NC) has been proposed as an emergent geometric property of deep neural networks (DNNs), providing valuable insights for TTA. In this work, we extend NC to the sample-wise level and discover a novel phenomenon termed Sample-wise Alignment Collapse (NC3+), demonstrating that a sample's feature embedding, obtained by a trained model, aligns closely with the corresponding classifier weight. Building on NC3+, we identify that the performance degradation stems from sample-wise misalignment in adaptation which exacerbates under larger distribution shifts. This indicates the necessity of realigning the feature embeddings with their corresponding classifier weights. However, the misalignment makes pseudo-labels unreliable under domain shifts. To address this challenge, we propose NCTTA, a novel feature-classifier alignment method with hybrid targets to mitigate the impact of unreliable pseudo-labels, which blends geometric proximity with predictive confidence. Extensive experiments demonstrate the effectiveness of NCTTA in enhancing robustness to domain shifts. For example, NCTTA outperforms Tent by 14.52\% on ImageNet-C. 
+<details>
+  <summary><strong>Abstract</strong></summary>
+
+  Test-Time Adaptation (TTA) enhances model robustness to out-of-distribution (OOD) data by updating the model online during inference, yet existing methods lack theoretical insights into the fundamental causes of performance degradation under domain shifts. Recently, Neural Collapse (NC) has been proposed as an emergent geometric property of deep neural networks (DNNs), providing valuable insights for TTA. In this work, we extend NC to the sample-wise level and discover a novel phenomenon termed Sample-wise Alignment Collapse (NC3+), demonstrating that a sample's feature embedding, obtained by a trained model, aligns closely with the corresponding classifier weight. Building on NC3+, we identify that the performance degradation stems from sample-wise misalignment in adaptation which exacerbates under larger distribution shifts. This indicates the necessity of realigning the feature embeddings with their corresponding classifier weights. However, the misalignment makes pseudo-labels unreliable under domain shifts. To address this challenge, we propose NCTTA, a novel feature-classifier alignment method with hybrid targets to mitigate the impact of unreliable pseudo-labels, which blends geometric proximity with predictive confidence. Extensive experiments demonstrate the effectiveness of NCTTA in enhancing robustness to domain shifts. For example, NCTTA outperforms Tent by 14.52\% on ImageNet-C.
+
+</details>
 
 <p align="center">
   <img src="./figs/contributions.png" alt="Contributions" width="50%">
@@ -37,7 +42,17 @@ Our main contributions are as follows:
   <img src="./figs/pipeline.png" alt="Pipeline" width="80%">
 </p>
 
-## Installation
+## 📑 Main Results
+
+In the mild shift scenario, where test samples are corrupted but drawn from a single domain, NCTTA consistently outperforms prior methods across all benchmarks. On CIFAR-10-C and ImageNet-C, NCTTA achieves the highest average accuracy, ranking first on nearly all corruption types. Similar gains are observed on PACS and Waterbirds, where NCTTA handles spurious correlations and domain shifts more effectively than existing methods. These results demonstrate the benefit of our feature-classifier alignment under domain shifts. Moreover, under certain corruptions, such as Snow and Frost on ImageNet-C, Tent performs even worse than no\_adapt. In contrast, NCTTA can mitigate the shortcomings of the $\mathcal{L}_{\text{ENT}}$ loss simply by incorporating $\mathcal{L}_{\text{NC}}$, without the need for additional augmentations or carefully designs. Below are the experimental results on ImageNet-C.
+
+<p align="center">
+  <img src="./figs/main_results_imagenetc.png" alt="main results" width="95%">
+</p>
+
+## 🏔️ Run
+
+### Installation
 
 Our codebase is built upon [TTAB](https://github.com/LINs-lab/ttab).  
 Before running the code, please install the required environment:
@@ -53,12 +68,30 @@ conda activate nctta
 pip install -r requirements.txt
 ```
 
-To run a baseline test, please prepare the corresponding pre-trained checkpoints for the base model and place them in `pretrain/ckpt/`.  
-You also need to prepare the required datasets in advance.  
+### Datasets and Checkpoints
 
-For running examples, please refer to [TTAB](https://github.com/LINs-lab/ttab).
+You need to prepare the required datasets in advance. Store the datasets under `NCTTA/datasets` with the following directory structure:
 
-## Additional Algorithms
+```text
+NCTTA/datasets/
+├── cifar10_c/
+├── cifar100_c/
+├── ILSVRC/
+│   ├── imagenet-c/
+│   └── val/
+├── pacs/
+│   ├── art/
+│   ├── cartoon/
+│   ├── photo/
+│   └── sketch/
+└── waterbirds/
+```
+
+To run baseline tests, please prepare the corresponding pre-trained checkpoints for the base model. [TTAB](https://github.com/LINs-lab/ttab) provides an improved pretraining script. Meanwhile, we release a set of checkpoints at this [link](https://cloud.tsinghua.edu.cn/d/96471c76505f4d758e05/), which were used to benchmark baselines and NCTTA in our paper.
+
+For runnable examples, please refer to [TTAB](https://github.com/LINs-lab/ttab).
+
+## 💭 Additional Algorithms
 
 In addition to the algorithms already implemented in [TTAB](https://github.com/LINs-lab/ttab), we further implement the following methods:
 
@@ -68,7 +101,7 @@ In addition to the algorithms already implemented in [TTAB](https://github.com/L
 - **Decoupled Entropy Minimization** (AdaDEM, [Ma et al., 2025](https://arxiv.org/abs/2511.03256))  
 - **Uncertainty-Calibrated Test-Time Model Adaptation without Forgetting** (EATAC, [Tan et al., 2025](https://arxiv.org/abs/2403.11491))  
 
-## Bibliography
+## 🀄️ Bibliography
 If you find this repository helpful for your project, please consider citing:
 ```
 @article{chen2025neural,
@@ -79,7 +112,7 @@ If you find this repository helpful for your project, please consider citing:
 }
 ```
 
-## Acknowledgment
+## ♥️ Acknowledgment
 
 This repo is developed upon [TTAB](https://github.com/LINs-lab/ttab).
 
