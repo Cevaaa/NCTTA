@@ -19,10 +19,10 @@ def get_args():
     
     # define test evaluation info.
     parser.add_argument("--root_path", default="./logs", type=str)
-    parser.add_argument("--data_path", default="./datasets", type=str)
+    parser.add_argument("--data_path", default="path/to/your/dataset/root", type=str)
     parser.add_argument(
         "--ckpt_path",
-        default="./pretrained_ckpts/classification/resnet26_with_head/cifar10/rn26_bn.pth",
+        default="path/to/your/checkpoint.pth",
         type=str,
     )
     parser.add_argument("--seed", default=2022, type=int)
@@ -49,6 +49,12 @@ def get_args():
             "cotta",
             "eata",
             "vida",
+            "deyo",
+            "nctta",
+            "come",
+            "adadem",
+            "eatac",
+            "sar2",
         ],
         type=str,
     )

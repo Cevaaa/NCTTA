@@ -117,4 +117,60 @@ algorithm_defaults = {
         "aug_size": 10,
         "rst_prob": 0.001,
         },
+    "deyo": {
+        "optimizer": "SGD",
+        "deyo_margin": math.log(1000) * 0.5, # 1000, 100, 10 for ImageNet-C, CIFAR-100-C and CIFAR-10-C respectively
+        "filter_ent": True, # whether to filter samples by entropy
+        "aug_type": "patch", # the augmentation type for prime
+        "occlusion_size": 112, # choises for occ
+        "row_start": 56, # choises for occ
+        "column_start": 56, # choises for occ
+        "patch_len": 4, # choises for patch
+        "filter_plpd": True, # whether to filter samples by plpd
+        "plpd_threshold": 0.3, # plpd threshold for DeYO
+        "reweight_ent": 1, # reweight entropy loss
+        "reweight_plpd": 1, # reweight plpd loss
+        "margin": math.log(1000) * 0.4, # ent0 margin for DeYO
+    },
+    "nctta": {
+        "optimizer": "SGD",
+        "thre_ent": math.log(1000) * 0.4,
+        "margin_ent": math.log(1000) * 0.4,
+        "reweight_ent": 1.0,
+        "nu": 5.0,
+        "eta": 1.0,
+        "scale": 5.0,
+        "top_k": 10, # 3
+        "mix_prob_weight": 0.3, # 0.3
+    },
+    "come": {
+        "optimizer": "SGD",
+        "K": 1000, 
+    },
+    "eatac": {
+        "optimizer": "SGD",
+        "eata_margin_e0": math.log(1000) * 0.40,
+        "eata_margin_d0": 0.05,
+        "fishers": True,
+        "fisher_size": 2000,
+        "fisher_alpha": 50,
+        # ===== New for EATA-C =====
+        "consistency_smooth_p": 0.5,       # p in Eq.(11)
+        "stochastic_depth_ratio": 0.2,
+        "entropy_alpha": 0.1,              # α in Eq.(14)
+    },
+    "sar2": {
+        "optimizer": "SGD",
+        "sar_margin_e0": math.log(1000) * 0.40,  # The threshold for reliable minimization in SAR.
+        "reset_constant_em": 0.2,  # threshold e_m for model recovery scheme
+        "alpha": 1e3,          # redundancy weight
+        "beta": 50,            # inequity weight
+        "feature_bank_momentum": 0.9,
+        "sar_margin_e0": 0.4 * math.log(1000),
+        "reset_constant_em": 0.2,
+    },
+    "adadem": {
+        "optimizer": "SGD",
+        "adadem_pi": 0.1,
+    },
 }

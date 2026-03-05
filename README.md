@@ -70,10 +70,10 @@ pip install -r requirements.txt
 
 ### Datasets and Checkpoints
 
-You need to prepare the required datasets in advance. Store the datasets under `NCTTA/datasets` with the following directory structure:
+You need to prepare the required datasets in advance. Store the datasets under `data_path` with the following directory structure:
 
 ```text
-NCTTA/datasets/
+data_path/
 ├── cifar10_c/
 ├── cifar100_c/
 ├── ILSVRC/
@@ -95,12 +95,12 @@ For runnable examples, please refer to [TTAB](https://github.com/LINs-lab/ttab).
 
 In addition to the algorithms already implemented in [TTAB](https://github.com/LINs-lab/ttab), we further implement the following methods:
 
-- **Entropy is not Enough for Test-Time Adaptation: From the Perspective of Disentangled Factors** (DeYO, [Lee et al., 2024](https://arxiv.org/abs/2403.07366))  
-- **COME: Test-time Adaptation by Conservatively Minimizing Entropy** (COME, [Zhan et al., 2025](https://openreview.net/pdf?id=506BjJ1ziZ))  
-- **Adapt in the Wild: Test-Time Entropy Minimization with Sharpness and Feature Regularization** (SAR2, [Niu et al., 2025](https://arxiv.org/abs/2509.04977))  
-- **Decoupled Entropy Minimization** (AdaDEM, [Ma et al., 2025](https://arxiv.org/abs/2511.03256))  
-- **Uncertainty-Calibrated Test-Time Model Adaptation without Forgetting** (EATAC, [Tan et al., 2025](https://arxiv.org/abs/2403.11491))
-- **ViDA: Homeostatic Visual Domain Adapter for Continual Test Time Adaptation** (ViDA, [Liu et al., 2023](https://arxiv.org/abs/2306.04344))
+- ViDA: Homeostatic Visual Domain Adapter for Continual Test Time Adaptation (ViDA, [Liu et al., 2023](https://arxiv.org/abs/2306.04344))
+- Entropy is not Enough for Test-Time Adaptation: From the Perspective of Disentangled Factors (DeYO, [Lee et al., 2024](https://arxiv.org/abs/2403.07366))  
+- COME: Test-time Adaptation by Conservatively Minimizing Entropy (COME, [Zhan et al., 2025](https://openreview.net/pdf?id=506BjJ1ziZ))  
+- Adapt in the Wild: Test-Time Entropy Minimization with Sharpness and Feature Regularization (SAR2, [Niu et al., 2025](https://arxiv.org/abs/2509.04977))  
+- Decoupled Entropy Minimization (AdaDEM, [Ma et al., 2025](https://arxiv.org/abs/2511.03256))  
+- Uncertainty-Calibrated Test-Time Model Adaptation without Forgetting (EATA-C, [Tan et al., 2025](https://arxiv.org/abs/2403.11491))
 
 ## 🀄️ Bibliography
 If you find this repository helpful for your project, please consider citing:

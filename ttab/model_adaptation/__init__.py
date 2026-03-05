@@ -14,6 +14,12 @@ from .ttt import TTT
 from .ttt_plus_plus import TTTPlusPlus
 from .rotta import Rotta
 from .vida import ViDA
+from .deyo import DEYO
+from .come import COME
+from .adadem import AdaDEM
+from .eata_c import EATAC
+from .sar2 import SAR2
+from .nctta import NCTTA
 
 
 def get_model_adaptation_method(adaptation_name):
@@ -33,4 +39,10 @@ def get_model_adaptation_method(adaptation_name):
         "eata": EATA,
         "rotta": Rotta,
         "vida": ViDA,
+        "deyo": DEYO,
+        "come": COME,
+        "adadem": AdaDEM,
+        "eatac": EATAC,
+        "sar2": SAR2,
+        "nctta": NCTTA,
     }[adaptation_name]
