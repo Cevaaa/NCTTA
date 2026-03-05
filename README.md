@@ -1,4 +1,4 @@
-# Neural Collapse in Test Time Adaptation (NCTTA)
+# Neural Collapse in Test Time Adaptation (CVPR 2026)
 <p align="center">
 
 <a href="https://github.com/Cevaaa/NCTTA">
